@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8" />
+    <title>Inventory Management</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/new_favicon.png" />
+  </head>
+
+  <body>
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+      <div class="one-half column" id="inventory-widget" style="margin-top: 6%">
+        <!-- heading banner -->
+        <div id="header-wrapper">
+          <header id="header">Inventory</header>
+          <p id="sub-header">Thanks for choosing GoodCorp, LLC!</p>
+        </div>
+
+        <form action="" onsubmit="return false">
+          <h5>Add Item</h5>
+          <div class="row">
+            <div class="eleven columns">
+              <label for="item-input">Item</label>
+              <input
+                class="u-full-width"
+                type="text"
+                placeholder="Kinder Bueno"
+                id="item-input"
+                autocomplete="off"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="four columns">
+              <label for="price-input">Price</label>
+              <input
+                class="u-full-width"
+                type="number"
+                placeholder="$1.64"
+                id="price-input"
+                step="0.01"
+                required
+              />
+            </div>
+
+            <div class="four columns">
+              <label for="quantity-input">Quantity</label>
+              <input
+                class="u-full-width"
+                type="number"
+                placeholder="36"
+                id="quantity-input"
+                required
+              />
+            </div>
+          </div>
+
+          <input id="add-button" type="submit" value="Add item" />
+        </form>
+
+        <form action="" onsubmit="return false">
+          <h5>Restock Item</h5>
+          <div class="row">
+            <div class="six columns">
+              <label for="item-select">Item</label>
+              <select class="u-full-width" id="item-select" required></select>
+            </div>
+
+            <div class="six columns">
+              <label for="restock-quantity-input">Quantity</label>
+              <input
+                class="u-full-width"
+                type="number"
+                placeholder="12"
+                id="restock-quantity-input"
+                required
+              />
+            </div>
+          </div>
+
+          <input id="restock-button" type="submit" value="Restock item" />
+        </form>
+
+        <div class="table-wrapper">
+          <table class="u-full-width">
+            <thead>
+              <tr>
+                <th>Index</th>
+                <th>Item</th>
+                <th>Quantity</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="one-half column" id="invoice-widget" style="margin-top: 6%">
+        <!-- heading banner -->
+        <div id="header-wrapper">
+          <header id="header">Invoice</header>
+          <p id="sub-header">Thanks for choosing GoodCorp, LLC!</p>
+        </div>
+
+        <!-- service select buttons -->
+        <div id="button-wrapper" class="row"></div>
+
+        <!-- insufficient stock alert -->
+        <div id="insufficient-message">
+          <img id="warning-icon" src="images/warning.png" alt="insufficient message icon"/>
+          <p id="error-message">Not enough stock</p>
+          <img id="close-icon" src="images/x-mark.png" alt="close icon"/>
+        </div>
+
+        <div id="bill-body">
+          <!-- bill heading -->
+          <div class="bill-head">
+            <p>Item</p>
+            <p>Total</p>
+          </div>
+
+          <!-- services selected -->
+          <div class="row" id="item-wrapper"></div>
+
+          <div class="seperator"></div>
+
+          <div class="bill-tail">
+            <p>Notes</p>
+            <p>Total Amount</p>
+          </div>
+
+          <div class="bill-end">
+            <p id="">We accept cash, credit card, or PayPal</p>
+            <div id="total-cash">$0</div>
+          </div>
+        </div>
+
+        <button id="invoice-btn">
+          <img src="images/mail_icon.png" alt="mail icon" />
+          Send invoice
+        </button>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  </body>
+</html>

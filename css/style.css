@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Inter', sans-serif;
+}
+
+#inventory-widget{
+    margin-bottom: 90px;
+    border-radius: 10px;
+    min-height: 80vh;
+    background-color: #FFFFFF;
+    color: #918E9B;
+    box-shadow: 13px 13px 26px #bfbfbf,-13px -13px 26px #ffffff;
+    /* border: 2px solid rgba(48, 117, 245, 0.539); */
+}
+
+form{
+    padding: 16px 20px;
+    margin-bottom: 0px !important;
+}
+
+form > h5{
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 4px;
+    font-weight: 800;
+    color: #3a69d2;
+}
+
+#inventory-widget label{
+    font-size: 10px;
+    margin-left: 4px;
+    color: #555555;
+}
+
+
+#inventory-widget input[type="text"],
+#inventory-widget input[type="number"],
+#item-select{ 
+    font-size: 12px;
+    height: 38px;
+    border-radius: 7px;
+    border: none;
+    color: #4A4E74;
+    border: 2px solid #D1D4F4;
+}
+
+#inventory-widget input:focus{
+    border-color: #4A4E74;
+}
+
+#add-button,
+#restock-button{
+    font-size: 10px;
+    text-transform: none;
+    text-align: center;
+    border: 1px solid #656565;
+    border-radius: 7px;
+    margin: 10px 4px;
+}
+
+.table-wrapper{
+    width: 86%;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding:0 20px;
+}
+
+th{
+    font-weight: 400;
+    color: #918E9B;
+}
+
+td
+{
+    padding-left: 10px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #666666;
+}
+
+#inventory-widget .table-index{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 10px;
+    color: #494949;
+}
+
+.available{
+    display: none;
+}
+
+.low-on-stock{
+    color: red;
+}
+
+#invoice-widget{
+    text-align: center;
+    margin-bottom: 90px;
+    border-radius: 10px;
+    min-height: 80vh;
+    background-color: #FFFFFF;
+    color: #918E9B;
+    box-shadow: 13px 13px 26px #bfbfbf,-13px -13px 26px #ffffff;
+}
+
+#header-wrapper{
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #f1f1f1;
+    color: #2B283A;
+}
+
+#header{
+    font-weight: 800;
+    font-size: 26px;
+}
+
+#sub-header {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 28px;
+    margin-bottom: 0px;
+}
+
+/* button to select the item */
+.item-btn{
+    border-radius: 7px;
+    font-size: 10px;
+    padding: 0px 20px;
+    margin: 10px 4px;
+    border: none;
+    text-transform: none;
+    border: 2px solid #D1D4F4;
+}
+
+
+.item-btn:hover {
+    border-color: #4A4E74;
+}
+
+#insufficient-message{
+  display: none;
+  align-items: center;
+  border-radius: 6px;
+  padding:10px 20px;
+  border: 1px solid #eaeaea;
+  background: #f77f7f9d;
+  margin:4px 10px;
+  height: 20px;
+}
+
+#close-icon{
+    width: 12px;
+}
+
+#warning-icon{
+    width: 20px;
+}
+
+#insufficient-message > p{
+    font-size: 14px;
+    margin: 3px 0;
+    margin-right: auto;
+    color: black;
+    margin-left: 10px;
+}
+
+.bill-head,
+.bill-tail,
+.bill-end,
+.item-entry
+{
+    width: 86%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bill-head{
+    margin: 20px auto;
+}
+
+.bill-tail {
+    margin: 10px auto 10px auto;
+}
+
+.bill-head>p,
+.bill-tail>p {
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 20px;
+    color: #918E9B;
+    margin: 0px;
+}
+
+.item-entry {
+    margin: 28px auto;
+}
+
+.item-name-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-name {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    margin-right: 10px;
+    color: #4A4E74;
+}
+
+.item-quantity{
+    font-weight: 700;
+    font-size: 20px;
+    margin:0 14px 0 10px;
+    color: goldenrod;
+}
+
+.remove-btn,
+.remove-all-btn {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 20px;
+    margin: 0px 10px;
+    color: #918E9B;
+}
+
+.remove-all-btn {
+    color: #ff6b6b;
+}
+
+.remove-btn:hover,
+.remove-all-btn:hover {
+    cursor: pointer;
+}
+
+.price-wrapper>span {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 20px;
+}
+
+.item-price {
+    color: #4A4E74 ;
+}
+
+.dollar-sign {
+    color: #61E786;
+}
+
+.seperator {
+    width: 86%;
+    height: 1px;
+    background-color: #b2b2b4;
+    margin: 6px auto;
+}
+
+.bill-end{
+    margin: 10px auto;
+}
+
+.bill-end >p {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    color: #2e2e2e;
+}
+
+#total-cash{
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 32px;
+    color: #918E9B;
+}
+
+/* generate invoice button */
+#invoice-btn{
+    border-radius: 7px;
+    text-transform: none;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    width: 90%;
+    margin: 40px auto 40px auto;
+    color: #FFFFFF;
+    background: #3A69D2;
+    box-shadow: 9px 9px 18px #c4c4c4, -9px -9px 18px #ffffff;
+}
+
+/* generate-invoice icon */
+#invoice-btn>img {
+    width: 16px;
+    margin: 0px 5px;
+}
+
+#invoice-btn:hover {
+    background: linear-gradient(145deg, #3A69D2, #335cb4);
+}
